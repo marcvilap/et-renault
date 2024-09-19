@@ -1,0 +1,24 @@
+---
+import { Image } from 'astro:assets'
+
+interface Props {
+	image: ImageMetadata
+	title: string
+	inverse?: boolean
+}
+
+const { image, title, inverse } = Astro.props
+---
+
+<section class="reveal relative grid bg-white text-[#003A63] lg:grid-cols-2">
+	<div class:list={['relative reveal:opacity-0', inverse ? 'reveal:translate-x-24 lg:order-2' : 'reveal:-translate-x-24']}>
+		<span class="absolute inset-4 rounded-lg bg-[#ECEBF7CC]"></span>
+		<div class="container relative grid gap-6 py-24 text-sm">
+			<h2 class="max-w-92 text-pretty text-4xl font-black">{title}</h2>
+			<slot />
+		</div>
+	</div>
+	<div class:list={['relative reveal:opacity-0', inverse ? 'reveal:-translate-x-24' : 'reveal:translate-x-24']}>
+		<Image class="absolute left-0 top-0 size-full object-cover" src={image} width={960} quality={90} alt="" />
+	</div>
+</section>

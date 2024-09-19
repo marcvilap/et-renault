@@ -1,0 +1,139 @@
+---
+import { Image } from 'astro:assets'
+import Layout from '$layouts/Layout.astro'
+import Icon from '$components/Icon.astro'
+import BlockBanner from '$components/BlockBanner.astro'
+import BlockHalf from '$components/BlockHalf.astro'
+import video01 from '$assets/videos/video-01.mp4'
+import video02 from '$assets/videos/video-02.mp4'
+import img01 from '$assets/images/img-01.webp'
+import img02 from '$assets/images/img-02.webp'
+import img03 from '$assets/images/img-03.webp'
+import img04 from '$assets/images/img-04.webp'
+import img05 from '$assets/images/img-05.webp'
+import img06 from '$assets/images/img-06.webp'
+import img07 from '$assets/images/img-07.webp'
+import img08 from '$assets/images/img-08.webp'
+import img09 from '$assets/images/img-09.webp'
+import img10 from '$assets/images/img-10.webp'
+import img11 from '$assets/images/img-11.webp'
+import imgFooter from '$assets/images/footer.svg'
+---
+
+<Layout>
+	<section class="reveal sticky top-0 bg-black text-white">
+		<video class="absolute left-0 top-0 size-full object-cover opacity-50" src={video01} autoplay loop muted playsinline></video>
+		<div class="container relative flex min-h-screen flex-col items-center justify-center gap-6 pb-8 pt-20">
+			<a class="self-start text-xs" href="/">
+				<strong class="block">Movilizando el Futuro</strong>
+				<span class="block">Un proyecto de</span>
+				<Icon class="ml-auto w-9" name="renault" />
+			</a>
+			<h1 class="mt-auto max-w-120 text-center text-6xl font-black uppercase reveal:translate-y-24 reveal:opacity-0">Con el viento a favor:</h1>
+			<p class="max-w-84 text-center text-lg font-medium reveal:translate-y-24 reveal:opacity-0 revealed:delay-100">La historia de cómo un avión dió lugar a un vehículo pionero del siglo XXI</p>
+			<Icon class="mt-auto w-8 animate-bounce" name="down" />
+		</div>
+	</section>
+
+	<BlockBanner image={img01}>
+		<h2 class="relative mx-auto max-w-xl text-center font-medium">En el vasto mundo de la innovación, algunos nombres logran vincularse tanto con el pasado como con el futuro. El <a class="text-[#00AEEF] underline" href="https://www.renault.es/hibridos/rafale.html" target="_blank">Renault Rafale</a>, nuevo SUV coupé de la marca francesa, es un claro ejemplo de ello.</h2>
+	</BlockBanner>
+
+	<section class="relative bg-black py-12 text-white">
+		<div class="reveal container">
+			<h2 class="mx-auto max-w-xl text-center font-medium reveal:translate-y-24 reveal:opacity-0">Para entender la verdadera esencia de este vehículo pionero del siglo XXI, debemos remontarnos al origen de su nombre, un nombre que evoca velocidad, poder y agilidad: <strong class="font-black">Caudron-Renault Rafale</strong></h2>
+		</div>
+	</section>
+
+	<section class="relative bg-black">
+		<iframe class="animate-parallax-scale relative aspect-video w-full bg-black" src="https://www.youtube.com/embed/vYrl0GapMkI" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+	</section>
+
+	<BlockHalf image={img02} title="La conquista del cielo" inverse>
+		<p>La historia comienza en los años 30, cuando Renault no solo se dedicaba a los automóviles, sino también a la aviación. En este contexto, el fabricante francés se asoció con la <strong>Société des Avions Caudron</strong>, una empresa aeronáutica fundada por los hermanos Caudron. Juntos, crearon una serie de aviones que hoy son parte de la historia en la aviación francesa.</p>
+		<p>El <strong>Caudron-Renault Rafale</strong> es una de las joyas de esa colaboración. Este avión monoplaza de carreras fue diseñado con un único objetivo en mente: ser el más rápido en su categoría. Y lo logró. En <strong>1934</strong>, el Rafale rompió un récord de velocidad al alcanzar los <strong>445 km/h</strong>, un logro que lo situó entre los aviones más avanzados de su tiempo.</p>
+		<p>La inspiración detrás del Caudron-Renault Rafale iba mucho más allá de la simple velocidad. Este avión representaba un <strong>enfoque visionario hacia el diseño, la ingeniería y la mecánica</strong>. Sin embargo, no es la primera vez que la aerodinámica inspira avances significativos en otros campos, y aquí es donde la historia se vuelve aún más interesante.</p>
+	</BlockHalf>
+
+	<BlockBanner image={img03}>
+		<span class="absolute inset-0 bg-gradient-to-r from-black/75 to-transparent"></span>
+		<h2 class="relative max-w-md text-3xl font-black text-[#00AEEF] lg:text-4xl">Este récord no solo subrayaba la capacidad de Renault para diseñar motores punteros, sino también su dedicación a la aerodinámica, un concepto que ha sido crucial en el desarrollo tecnológico aéreo y terrestre.</h2>
+	</BlockBanner>
+
+	<section class="reveal relative bg-white text-[#003A63] lg:grid lg:grid-cols-2">
+		<div class="relative reveal:-translate-x-24 reveal:opacity-0">
+			<span class="absolute inset-4 rounded-lg bg-[#ECEBF7CC]"></span>
+			<div class="container relative grid gap-6 py-24 text-sm">
+				<h2 class="max-w-xs text-3xl font-black lg:text-4xl">Inventores visionarios: el viento como motor del cambio</h2>
+				<p>El viento ha sido una fuerza inspiradora durante siglos. Cuando pensamos en la aerodinámica, nombres como Wright, Von Kármán y Gustave Eiffel vienen a la mente, cada uno de ellos clave en la transformación de la forma en que nos movemos por el mundo.</p>
+				<nav class="flex gap-6">
+					<button class="swiper-prev w-8"><Icon name="prev" /></button>
+					<button class="swiper-next w-8"><Icon name="next" /></button>
+				</nav>
+			</div>
+		</div>
+		<div class="relative overflow-clip reveal:translate-x-24 reveal:opacity-0">
+			<div class="py-4 max-lg:container">
+				<div class="swiper -mr-48">
+					<div class="swiper-wrapper">
+						<article class="swiper-slide">
+							<Image class="mb-6 rounded-lg" src={img04} width={616} quality={90} alt="" />
+							<p class="text-sm lg:px-8"><strong>Los hermanos Wright</strong>, conocidos por su primer vuelo en 1903, revolucionaron la aviación con su comprensión de la aerodinámica, refinando el control de las alas para dominar el viento y conseguir un vuelo estable. Lo que comenzó como una aventura impulsada por el deseo de conquistar el aire, terminó en un salto cuántico para la humanidad.</p>
+						</article>
+						<article class="swiper-slide">
+							<Image class="mb-6 rounded-lg" src={img05} width={616} quality={90} alt="" />
+							<p class="text-sm lg:px-8"><strong>Theodore von Kármán</strong>, físico e ingeniero húngaro-estadounidense, hizo contribuciones fundamentales a la teoría de la aerodinámica. Su famoso "vórtice de Kármán" describía la forma en que los fluidos se mueven alrededor de los cuerpos sólidos, un concepto crucial para mejorar el rendimiento en el diseño tanto de aviones como de automóviles.</p>
+						</article>
+						<article class="swiper-slide">
+							<Image class="mb-6 rounded-lg" src={img06} width={616} quality={90} alt="" />
+							<p class="text-sm lg:px-8"><strong>Gustave Eiffel</strong>, conocido por la torre que lleva su nombre, no solo fue un genio de la arquitectura, sino también un pionero de la aerodinámica. Su interés por el movimiento del aire alrededor de las estructuras lo llevó a construir túneles de viento, un invento que luego se utilizó para perfeccionar diseños aeronáuticos y automotrices. Eiffel demostró que entender el viento era clave para alcanzar nuevas fronteras.</p>
+						</article>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<BlockBanner image={img07}>
+		<h2 class="relative mx-auto max-w-xl text-center font-medium">Lo que une a todos estos inventores es una idea común: la necesidad de dominar las fuerzas invisibles, como el viento, para avanzar en la tecnología. Renault ha seguido esta tradición y el Caudron-Renault Rafale es una muestra clara de ese enfoque. No solo rompió barreras en el cielo, sino que sentó las bases para vehículos terrestres más eficientes y dinámicos.</h2>
+	</BlockBanner>
+
+	<BlockHalf image={img08} title="Una fuerza que moldea la innovación" inverse>
+		<p>Curiosamente, el viento ha jugado un papel crucial en la evolución de la tecnología, y no solo en el aire. Como elemento meteorológico, ha influido en la forma en que diseñamos nuestras construcciones, vehículos y métodos de transporte.</p>
+		<p>De hecho, la aerodinámica de los vehículos modernos está profundamente conectada con la forma en que el viento interactúa con los objetos. Desde coches de Fórmula 1 hasta aviones y SUV de alta gama como el Renault Rafale E-Tech hybrid, comprender y aprovechar las ráfagas de viento es esencial para maximizar el rendimiento y la eficiencia.</p>
+		<p>Un dato curioso: el viento que más comúnmente enfrentamos en las carreteras es el viento de frente, que puede aumentar el consumo de combustible hasta en un 10-15% si no se gestiona adecuadamente. Por eso, el diseño aerodinámico de los vehículos, como el del Renault Rafale, no es solo estético; es una estrategia inteligente para minimizar la resistencia y mejorar la eficiencia energética, alineándose con las tendencias hacia la sostenibilidad.</p>
+	</BlockHalf>
+
+	<BlockBanner image={img09}>
+		<span class="absolute inset-0 bg-gradient-to-r from-white/75 to-transparent"></span>
+		<h2 class="relative max-w-md text-3xl font-black text-[#003A63] lg:text-4xl">Por ejemplo, los vientos huracanados de la Antártida, los más intensos del mundo, pueden alcanzar velocidades de hasta 327 km/h, una muestra del poder que esta fuerza natural tiene para moldear nuestro entorno.</h2>
+	</BlockBanner>
+
+	<BlockHalf image={img10} title="Un vehículo pionero con la mirada en el futuro">
+		<p>Con esta herencia aeronáutica y la inspiración de visionarios que han trabajado para entender y aprovechar las fuerzas del viento, el Renault Rafale E-Tech hybrid no es solo un SUV coupé más. Es un vehículo que combina lo mejor de la historia de Renault con las tecnologías del futuro, todo envuelto en un diseño que evoca velocidad, precisión y audacia.</p>
+		<p>El diseño y la ingeniería del Rafale son un reflejo de la obsesión de Renault por la perfección técnica, combinando motores híbridos que aseguran un equilibrio perfecto entre potencia y eficiencia. Este modelo ofrece una opción híbrida enchufable de 300 CV y una versión totalmente híbrida de 200 CV, ambas con la capacidad de brindar una experiencia de conducción que no solo es emocionante, sino también respetuosa con el medio ambiente.</p>
+	</BlockHalf>
+
+	<BlockBanner video={video02}>
+		<h2 class="relative mx-auto max-w-xl text-center font-medium">La historia del Renault Rafale no es solo la de un coche inspirado en un avión; es la historia de cómo el viento, esa fuerza natural que ha desafiado a inventores y diseñadores durante siglos, sigue siendo una fuente de inspiración y evolución tecnológica. Desde los récords del <strong class="font-black">Caudron-Renault Rafale</strong> en los años 30, hasta los avances aerodinámicos que dieron lugar a inventos de pioneros como <strong class="font-black">Von Kármán y Eiffel</strong>, el viento ha impulsado a la humanidad hacia nuevas fronteras.</h2>
+	</BlockBanner>
+
+	<section class="relative bg-black text-white">
+		<div class="animate-parallax-scale relative overflow-clip">
+			<Image class="absolute left-0 top-0 size-full object-cover" src={img11} width={1920} quality={90} alt="" />
+			<div class="container relative grid min-h-screen py-24">
+				<div class="flex h-full items-center rounded-2xl bg-[#413E3A4D] p-6">
+					<h2 class="mx-auto max-w-4xl text-pretty text-center text-3xl font-black lg:text-4xl">Este récord no solo subrayaba la capacidad de Renault para diseñar motores punteros, sino también su dedicación a la aerodinámica, un concepto que ha sido crucial en el desarrollo tecnológico aéreo y terrestre.</h2>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer class="relative bg-[#203F51] text-white">
+		<img class="absolute left-0 top-0 size-full object-cover" src={imgFooter.src} alt="" />
+		<div class="container relative py-24">
+			<p class="text-center text-sm">ElTiempo Content para</p>
+			<Icon class="mx-auto mt-6 w-12" name="renault" />
+		</div>
+	</footer>
+</Layout>

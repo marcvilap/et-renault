@@ -1,0 +1,20 @@
+---
+import { Image } from 'astro:assets'
+
+interface Props {
+	image?: ImageMetadata
+	video?: string
+}
+
+const { image, video } = Astro.props
+---
+
+<section class="relative bg-black text-white">
+	<div class="animate-parallax-scale relative overflow-clip">
+		{image && <Image class="sticky top-0 h-screen w-full object-cover" src={image} width={1920} quality={90} alt="" />}
+		{video && <video class="sticky top-0 h-screen w-full object-cover opacity-40" src={video} autoplay loop muted playsinline />}
+		<div class="container min-h-screen py-24">
+			<slot />
+		</div>
+	</div>
+</section>
